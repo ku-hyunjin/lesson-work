@@ -17,6 +17,7 @@ class Product
         // 初めて if-else の省略形 「？　：　」　を使いました。
 
         $text = "{$this->name} / {$this->price}円 / {$stockText}";
+        // 途中で保存できる変数を作る
 
         if (!$this->isAvailable()) {
             $text = "[SOLD OUT] " . $text;
