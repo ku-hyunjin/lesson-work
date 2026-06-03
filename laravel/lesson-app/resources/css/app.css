@@ -1,11 +1,67 @@
-@import 'tailwindcss';
+.panel-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+.panel-link {
+    display: block;
+    padding: 20px;
+    border-radius: 18px;
+    background: var(--surface-soft);
+    border: 1px solid #eadcc8;
+    text-decoration: none;
+}
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+.panel-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.panel-link strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.panel-text {
+    display: block;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.alert {
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    line-height: 1.7;
+}
+
+.success-alert {
+    background: var(--success-bg);
+    border-color: var(--success-border);
+}
+
+.error-alert {
+    background: var(--error-bg);
+    border-color: var(--error-border);
+    padding-left: 28px;
+}
+
+.empty-state {
+    padding: 28px;
+    border-radius: 18px;
+    background: var(--surface-soft);
+    border: 1px dashed #d9c7af;
+    color: var(--muted);
+    text-align: center;
+}
+
+.inline-form {
+    margin: 0;
 }
