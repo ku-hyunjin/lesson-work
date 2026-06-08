@@ -16,7 +16,8 @@ class PostController extends Controller
                 $query->where('title', 'like', '%' . $keyword . '%');
             })
             ->latest()
-            ->get();
+            ->paginate(5)
+            ->withQueryString();
 
         return view('posts.index', compact('posts', 'keyword'));
     }
