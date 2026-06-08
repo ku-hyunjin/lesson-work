@@ -51,6 +51,11 @@
                         <div class="empty-state">まだ投稿がありません。</div>
                     @endforelse
                 </div>
+
+                <div class="pagination-wrap">
+                    {{ $posts->links('pagination::simple-default') }}
+                </div>
+
             </section>
     </main>
 </body>
